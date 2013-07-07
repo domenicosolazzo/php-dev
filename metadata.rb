@@ -10,14 +10,6 @@ version          '0.1.2'
 depends "apache2"
 depends "apt"
 
-# Register PHP 5.4 PPA repository
-apt_repository "php54" do
-  uri "http://ppa.launchpad.net/ondrej/php5/ubuntu"
-  distribution node['lsb']['codename']
-  components ["main"]
-  keyserver "keyserver.ubuntu.com"
-  key "E5267A6C"
-end
 
 depends "build-essential"
 depends "mysql"
