@@ -10,7 +10,6 @@ include_recipe "apt"
 
 include_recipe "apache2"
 
+include_recipe "build-essentials"
+include_recipe "xml"
 include_recipe "php"
-include_recipe "chef-phpunit"
-include_recipe "composer"
-include_recipe "xdebug"

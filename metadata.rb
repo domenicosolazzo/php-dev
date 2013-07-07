@@ -9,7 +9,6 @@ version          '0.1.1'
 
 depends "apache2"
 depends "apt"
+depends "build-essential"
+depends "mysql"
 depends "php"
-depends "chef-phpunit"
-depends "composer"
-depends "xdebug"
