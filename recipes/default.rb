@@ -6,6 +6,17 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+node.set["apache"]["user"]  = "vagrant"
+node.set["apache"]["group"] = "vagrant"
+
+node.set['mysql']['server_root_password'] = "root"
+node.set['mysql']['server_debian_password'] = "root"
+node.set['mysql']['server_repl_password'] = "root"
+
+node.set['mysql']['bind_address'] = node[:app][:ip]
+node.set['mysql']['allow_remote_root'] = "1";
+
 include_recipe "apt"
 
 
