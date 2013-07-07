@@ -12,7 +12,7 @@ depends "apt"
 depends "build-essential"
 depends "mysql"
 depends "php"
-depends "composer"
+depends "chef-composer"
 depends "phpunit"
 depends "xdebug"
 
