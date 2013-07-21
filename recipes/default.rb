@@ -70,7 +70,7 @@ end
 
 web_app "example-site" do
     server_name node['fqdn']
-    server_aliases [[node['fqdn'], node['hostname']]
+    server_aliases [node['fqdn'], node['hostname']]
     docroot node['vhost_root']
     template "default_site.conf.erb"
 end
