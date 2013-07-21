@@ -34,6 +34,9 @@ include_recipe "mysql::client"
 include_recipe 'php'
 include_recipe "apache2"
 include_recipe "apache2::mod_php5"
+include_recipe "apache2::mod_rewrite"
+include_recipe "apache2::mod_deflate"
+include_recipe "apache2::mod_headers"
 
 package "php5-mysql" do
       action :install
