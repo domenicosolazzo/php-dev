@@ -3,6 +3,7 @@ default[:app][:server_aliases]     = ["*.localhost"]
 default[:app][:docroot]            = "/home/vagrant/web-app"
 default[:app][:php_timezone]       = "Europe/Rome"
 default[:app][:vhost_root]         = "/vagrant/sites/default"
+default[:vhost_root]         = "/vagrant/sites/default"
 
 default[:apache][:default_site_enabled] = false
 #default[:apache][:log_dir] = "/var/logs/apache2"
