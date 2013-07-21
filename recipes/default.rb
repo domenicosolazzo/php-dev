@@ -34,7 +34,6 @@ include_recipe "mysql::client"
 include_recipe 'php'
 include_recipe "apache2"
 include_recipe "apache2::mod_php5"
-include_recipe "phpmyadmin"
 
 package "php5-mysql" do
       action :install
@@ -47,3 +46,15 @@ end
 package "php5-curl" do
     action :install
 end
+
+package "php5-cli" do
+    action :install
+end 
+
+package "php5-mhash" do
+    action :install
+end 
+
+package "php5-gd" do
+    action :install
+end 
