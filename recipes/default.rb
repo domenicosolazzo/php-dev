@@ -60,4 +60,17 @@ end
 
 package "php5-gd" do
     action :install
-end 
+end
+
+directory node['vhost_root'] do
+    mode 00755
+    action :create
+    recursive true
+end
+
+web_app "example-site" do
+    server_name node['fqdn']
+    server_aliases [[node['fqdn'], node['hostname']]
+    docroot node['vhost_root']
+    template "default_site.conf.erb"
+end
