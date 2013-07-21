@@ -28,12 +28,22 @@ apt_repository "php54" do
   keyserver "keyserver.ubuntu.com"
   key "E5267A6C"
 end
-
-include_recipe "apache2"
-
 include_recipe "build-essential"
-include_recipe "xml"
-include_recipe "php"
-include_recipe "phpunit"
-include_recipe "chef-composer"
-include_recipe "xdebug"
+include_recipe "mysql::server"
+include_recipe "mysql::client"
+include_recipe 'php'
+include_recipe "apache2"
+include_recipe "apache2::mod_php5"
+include_recipe "phpmyadmin"
+
+package "php5-mysql" do
+      action :install
+end
+
+package "php5-mcrypt" do
+      action :install
+end
+
+package "php5-curl" do
+    action :install
+end
